@@ -30,14 +30,21 @@ public class Program2 {
 		}
 		
 		
-		
+		/*
 		System.out.println("\n=== TEST 3: department insert =====");
 		
 		Department newDepartment = new Department(null, "Paint");
 		departmentDao.insert(newDepartment);
 		System.out.println("Inserted! New id = " + newDepartment.getId());
-		
+		*/
 
+		
+		System.out.println("\n=== TEST 5: department update =====");
+		
+		department = departmentDao.findById(1);
+		department.setName("Music");
+		departmentDao.update(department);
+		System.out.println("Update completed");
 	}
 
 }
